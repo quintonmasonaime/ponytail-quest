@@ -593,12 +593,7 @@
         status.textContent = 'Look link copied — paste it anywhere.';
       } catch (error) {
         if (error && error.name === 'AbortError') return;
-        try {
-          window.prompt('Copy your look link:', url);
-          status.textContent = 'Your look link is ready to copy.';
-        } catch (_) {
-          status.textContent = 'Use your browser share menu to share this look.';
-        }
+        status.textContent = `Copy the current page address to share ${look.name}'s look.`;
       }
     }
 
